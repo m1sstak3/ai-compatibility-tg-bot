@@ -14,27 +14,19 @@
 
 ## 📱 Демонстрация интерфейса
 
-> 💡 **Заметка:** Замени ссылки `src=""` на свои скриншоты, пропущенные через Shots.so. 
-
 <table align="center">
   <tr>
     <td align="center">
-      <b>🎮 Начало игры</b><br>
-      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Start" width="400" />
+      <b>🎮 Создание комнаты</b><br>
+      <img src="https://github.com/user-attachments/assets/ec0ae142-df1b-4990-96c0-314e7f02e8ea" width="280" />
     </td>
     <td align="center">
-      <b>🧠 Генерация вопроса (LLM)</b><br>
-      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Question" width="400" />
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <b>🎭 Психологическая мимикрия</b><br>
-      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Fake+Answer" width="400" />
+      <b>🧠 Процесс игры</b><br>
+      <img src="https://github.com/user-attachments/assets/81d66416-f9a5-4e88-bdf6-1b9cecfb1eb2" width="280" />
     </td>
     <td align="center">
-      <b>📊 Результат совместимости</b><br>
-      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Result" width="400" />
+      <b>📊 Вердикт ИИ</b><br>
+      <img src="https://github.com/user-attachments/assets/ced94155-bba4-4dd2-a7cf-3be7e3bf9abd" width="280" />
     </td>
   </tr>
 </table>
