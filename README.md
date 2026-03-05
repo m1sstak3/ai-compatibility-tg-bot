@@ -1,78 +1,119 @@
-# ИИ Тест на совместимость 🤖💕
+<div align="center">
+  <h1>🤖💕 ИИ Тест на совместимость (Telegram Bot)</h1>
+  <p><b>Продвинутый бот-ведущий для проверки совместимости пар с динамической генерацией вопросов через LLM и алгоритмом «психологической мимикрии».</b></p>
 
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Aiogram 3.x](https://img.shields.io/badge/Aiogram-3.x-green)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-Async-orange)
-![LLM Integration](https://img.shields.io/badge/LLM-OpenRouter-red)
+  <div>
+    <img src="https://img.shields.io/badge/Python_3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+    <img src="https://img.shields.io/badge/Aiogram_3.x-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Aiogram" />
+    <img src="https://img.shields.io/badge/SQLAlchemy_Async-CC2927?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLAlchemy" />
+    <img src="https://img.shields.io/badge/OpenRouter_LLM-4A90E2?style=for-the-badge&logo=openai&logoColor=white" alt="OpenRouter" />
+  </div>
+</div>
 
-Продвинутый Telegram-бот, выступающий в роли "ИИ-ведущего" для проверки совместимости пар через серию динамических вопросов, сгенерированных нейросетью.
+---
 
-## 📖 Обзор
-Этот проект демонстрирует современную backend-разработку на Python, используя асинхронное программирование, конечные автоматы (FSM) и сложную интеграцию с большими языковыми моделями (LLM). Бот генерирует контекстные вопросы на основе статуса отношений игроков (живут вместе или на расстоянии) и применяет алгоритм "психологической мимикрии" для создания фейковых ответов партнера, превращая тест на совместимость в увлекательную игру.
+## 📱 Демонстрация интерфейса
 
-## ✨ Ключевые особенности
-* **Динамическая генерация контента:** Использует OpenRouter (Qwen/Trinity) для создания 10 уникальных раундов вопросов, адаптированных под пол игроков и их жизненную ситуацию.
-* **Алгоритм психологической мимикрии:** Генерирует крайне правдоподобные "фейковые" ответы, которые копируют стиль общения партнера, но в корне отличаются по смыслу.
-* **Асинхронная архитектура:** Построен на `aiogram 3.x` с полностью асинхронными неблокирующими обработчиками и собственным надежным ограничителем частоты запросов (Semaphore) для внешних API.
-* **Модульный дизайн:** Строгое разделение на слои архитектуры (`core`, `bot`, `services`, `database`), обеспечивающее принципы SOLID и высокую поддерживаемость кода.
-* **Управление сессиями:** Безопасная обработка сессий в памяти для изоляции состояний игр между разными одновременными пользователями, предотвращающая утечки памяти и состояния гонки (race conditions).
+> 💡 **Заметка:** Замени ссылки `src=""` на свои скриншоты, пропущенные через Shots.so. 
 
-## 🏗 Архитектура
-Проект следует чистой модульной структуре:
+<table align="center">
+  <tr>
+    <td align="center">
+      <b>🎮 Начало игры</b><br>
+      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Start" width="400" />
+    </td>
+    <td align="center">
+      <b>🧠 Генерация вопроса (LLM)</b><br>
+      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Question" width="400" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>🎭 Психологическая мимикрия</b><br>
+      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Fake+Answer" width="400" />
+    </td>
+    <td align="center">
+      <b>📊 Результат совместимости</b><br>
+      <img src="https://via.placeholder.com/400x800/151B23/FFFFFF?text=Mockup:+Result" width="400" />
+    </td>
+  </tr>
+</table>
+
+---
+
+## ✨ Ключевые особенности (Value Proposition)
+
+Этот проект демонстрирует современную backend-разработку, объединяя асинхронное программирование, конечные автоматы (FSM) и сложную интеграцию с большими языковыми моделями (LLM).
+
+* 🧠 **Динамическая генерация контента:** Использование OpenRouter (Qwen/Trinity) для создания уникальных раундов вопросов, адаптированных под пол игроков и их жизненную ситуацию (живут вместе или на расстоянии).
+* 🎭 **Алгоритм психологической мимикрии:** Генерация крайне правдоподобных «фейковых» ответов, которые копируют стиль общения партнера, но в корне отличаются по смыслу — превращает тест в захватывающую игру.
+* ⚡ **Асинхронная архитектура:** Построено на `aiogram 3.x` с полностью неблокирующими обработчиками и собственным надежным ограничителем частоты запросов (Semaphore) для внешних API.
+* 🧩 **Модульный дизайн:** Строгое разделение на слои архитектуры (`core`, `bot`, `services`, `database`), обеспечивающее принципы SOLID и высокую поддерживаемость кода.
+* 🔒 **Управление сессиями:** Безопасная обработка сессий в памяти для изоляции состояний игр между разными пользователями, защита от утечек памяти и состояния гонки (Race Conditions).
+
+---
+
+## 🏗 Архитектура и под капотом
+
+Проект следует чистой модульной структуре для обеспечения легкого масштабирования и тестирования.
+
+<details>
+<summary><b>📂 Посмотреть структуру проекта</b></summary>
+<br>
+
 ```text
 src/
 ├── core/
-│   └── config.py        # Переменные окружения и центральный логгер
+│   └── config.py          # Переменные окружения и центральный логгер
 ├── database/
-│   ├── connection.py    # Асинхронный движок SQLAlchemy и DAL слой
-│   └── models.py        # Декларативные ORM модели
+│   ├── connection.py      # Асинхронный движок SQLAlchemy и DAL слой
+│   └── models.py          # Декларативные ORM модели
 ├── bot/
-│   ├── fsm.py           # Конечные автоматы (State Machines) Aiogram
-│   └── handlers.py      # Маршрутизация Telegram и логика представления
+│   ├── fsm.py             # Конечные автоматы (State Machines) Aiogram
+│   └── handlers.py        # Маршрутизация Telegram и логика представления
 ├── services/
-│   ├── llm.py           # API-клиент LLM с авто-повторами и лимитами
+│   ├── llm.py             # API-клиент LLM с авто-повторами и лимитами
 │   └── session_manager.py # Потокобезопасное отслеживание состояния игры
-└── main.py              # Точка входа в приложение
+└── main.py                # Точка входа в приложение
 ```
+</details>
+
+---
 
 ## 🚀 Быстрый старт
-### Требования
-- Python 3.10+
-- Токен Telegram бота
-- API ключ OpenRouter
 
-### Установка
-1. Клонируйте репозиторий:
+### 1. Требования
+* Python 3.10+
+* Токен Telegram бота (от @BotFather)
+* API ключ OpenRouter
+
+### 2. Установка и запуск (Локально)
 ```bash
-git clone https://github.com/yourusername/ai-compatibility-bot.git
+git clone [https://github.com/m1sstak3/ai-compatibility-bot.git](https://github.com/m1sstak3/ai-compatibility-bot.git)
 cd ai-compatibility-bot
-```
 
-2. Создайте виртуальное окружение и установите зависимости:
-```bash
+# Создание виртуального окружения
 python -m venv venv
 source venv/bin/activate  # На Windows: venv\Scripts\activate
 pip install -r requirements.txt
-```
 
-3. Настройте переменные окружения:
-```bash
+# Настройка переменных окружения
 cp .env.example .env
 # Отредактируйте .env и вставьте ваши API ключи
-```
 
-4. Запустите бота:
-```bash
+# Запуск бота
 python -m src.main
 ```
 
-## 🛠 Стек технологий
-* **Фреймворк:** Aiogram 3.x
-* **База данных:** SQLite (через `aiosqlite`), SQLAlchemy
-* **AI Провайдер:** OpenRouter API
-* **Прочее:** `python-dotenv`, `asyncio`
+---
 
-## 📈 Масштабирование и будущие улучшения
-* **Интеграция Redis:** Замена `InMemorySessionManager` на Redis для распределенного, отказоустойчивого хранения состояний FSM и игр.
-* **PostgreSQL:** Простая миграция с SQLite на PostgreSQL путем изменения строки подключения в `config.py` благодаря абстракциям SQLAlchemy.
-* **Alembic:** Добавление миграций базы данных для бесшовного обновления схемы в продакшене.
+## 📈 Масштабирование и Roadmap
+* 🔴 **Интеграция Redis:** Замена `InMemorySessionManager` на Redis для распределенного, отказоустойчивого хранения состояний FSM и активных игр.
+* 🐘 **PostgreSQL:** Простая миграция с SQLite на PostgreSQL путем изменения строки подключения в `config.py` благодаря абстракциям SQLAlchemy.
+* 🔄 **Alembic:** Добавление миграций базы данных для бесшовного обновления схемы в production-среде.
+
+---
+
+<div align="center">
+  <b>Developed with ❤️ by m1sstak3</b>
+</div>
